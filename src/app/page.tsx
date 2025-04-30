@@ -2,14 +2,15 @@ import React from 'react'
 import Container from '@mui/material/Container'
 import { Box } from '@mui/material'
 import Image from 'next/image'
+import { useRouter } from 'next/router';
 
 const Home = () => {
+  const { basePath } = useRouter();
   return (
     <Container maxWidth="lg" 
     className='bg-gray-300 h-screen flex flex-col items-center justify-center'>
       <Box className='bg-white w-[30%] rounded-3xl shadow-lg p-6 flex flex-col items-center'>
-        <Image src="/assets/images/image-qr-code.png" alt="QR Code" width={300} height={300} 
-               className='rounded-2xl' />
+      <Image src={`${basePath}/assets/images/image-qr-code.png`} alt="QR Code" width={300} height={300} className="rounded-2xl" />
         <h1
         className='text-2xl font-bold text-center text-gray-800 mt-4'
         >Improve your front-end skills by building projects</h1>
