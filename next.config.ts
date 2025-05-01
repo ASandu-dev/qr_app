@@ -1,11 +1,11 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  basePath: '',
   output: 'export',
   images: {
     unoptimized: true,
   },
+  basePath: '/qr_app',
 };
 
 export default nextConfig;
