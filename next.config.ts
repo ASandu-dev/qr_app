@@ -1,14 +1,14 @@
-import type { NextConfig } from "next";
-
 const isProd = process.env.NODE_ENV === 'production';
-const NextConfig = {
+
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   reactStrictMode: true,
   images: {
-    unoptimized: true, // Disable default image optimization
+    unoptimized: true,
   },
   assetPrefix: isProd ? '/qr_app/' : '',
   basePath: isProd ? '/qr_app' : '',
-  output: 'export'
+  output: 'export',
 };
 
-export default NextConfig;
+export default nextConfig;
